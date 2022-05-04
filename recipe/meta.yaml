@@ -27,6 +27,8 @@ requirements:
     - pooch >=1.0
     - xarray >=0.15
     - py-cordex >=0.4.0
+    - xesmf
+    - cf_xarray
 
 test:
   imports:
