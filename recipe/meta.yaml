@@ -1,21 +1,21 @@
 {% set name = "pyremo" %}
-{% set version = "0.3.1" %}
+{% set version = "0.3.2" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 04755bec79203bf5f28692bc1c1968761158e8bd95d857b3dbb87cb5279ce619
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 0a2181f38af6f58360589fdf6c1ce1515bc0afc1d8eb90f051eda05786675645
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
-    -  "prsint = pyremo.cli:prsint"
-    -  "pyremo-analysis = pyremo.cli:main_analysis"
+    - prsint = pyremo.cli:prsint
+    - pyremo-analysis = pyremo.cli:main_analysis
 
 requirements:
   host:
@@ -32,17 +32,17 @@ requirements:
 
 test:
   imports:
-    - pyremo 
+    - pyremo
 
 about:
   home: https://github.com/remo-rcm/pyremo
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: "processing tools for the regional climate model REMO"
+  summary: processing tools for the regional climate model REMO
   doc_url: https://pyremo.readthedocs.io
-  dev_url: https://github.com/remo-rcm/pyremo 
+  dev_url: https://github.com/remo-rcm/pyremo
 
 extra:
   recipe-maintainers:
-    - larsbuntemeyer 
+    - larsbuntemeyer
