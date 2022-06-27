@@ -10,7 +10,7 @@ source:
   sha256: 0a2181f38af6f58360589fdf6c1ce1515bc0afc1d8eb90f051eda05786675645
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -21,6 +21,8 @@ requirements:
   host:
     - pip
     - python >=3.7
+    - setuptools_scm
+    
   run:
     - python >=3.7
     - numpy >=1.17
@@ -29,6 +31,7 @@ requirements:
     - py-cordex >=0.4.0
     - xesmf
     - cf_xarray
+    - setuptools >=40.4
 
 test:
   imports:
