@@ -16,6 +16,7 @@ build:
   entry_points:
     - prsint = pyremo.cli:prsint
     - pyremo-analysis = pyremo.cli:main_analysis
+    - pradd-vars = pyremo.cli:add_variables
 
 requirements:
   host:
