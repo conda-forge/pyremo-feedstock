@@ -29,8 +29,8 @@ requirements:
     - pooch >=1.0
     - xarray >=0.20
     - py-cordex >=0.4.0
-    - xesmf>=0.7.0
-    - cf_xarray>=0.8.0
+    - xesmf >=0.7.0
+    - cf_xarray >=0.8.0
     - setuptools >=40.4
 
 test:
