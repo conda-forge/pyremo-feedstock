@@ -1,5 +1,5 @@
 {% set name = "pyremo" %}
-{% set version = "0.4.1" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,8 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4db07966a8c00546e4f5ee2c8650e54d3b01441ce3ef70f1c1368402ea2c7750
-
+  sha256: 7095df445e3307c3b7b9aa5a102b6056550fdc15cbcbaf8c44ddb6741873598e
 build:
   number: 0
   noarch: python
@@ -30,8 +29,8 @@ requirements:
     - pooch >=1.0
     - xarray >=0.20
     - py-cordex >=0.4.0
-    - xesmf
-    - cf_xarray
+    - xesmf>=0.7.0
+    - cf_xarray>=0.8.0
     - setuptools >=40.4
 
 test:
