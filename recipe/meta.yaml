@@ -1,5 +1,5 @@
 {% set name = "pyremo" %}
-{% set version = "0.6.0" %}
+{% set version = "0.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6f2744db96a99c60a755e8900be5337c3d9db99f15240735ce281b9b627e6e73
+  sha256: 668243bfac0e9bcf89ef47a8574fcb181cb81f79bba47a1170840c6c03fe8ae4
 build:
   number: 0
   noarch: python
