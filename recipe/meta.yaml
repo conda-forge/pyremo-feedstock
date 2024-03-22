@@ -25,7 +25,7 @@ requirements:
 
   run:
     - python >=3.7
-    - numpy >=1.17
+    - numpy < 1.26.3
     - pooch >=1.0
     - xarray >=0.20
     - py-cordex >=0.4.0
