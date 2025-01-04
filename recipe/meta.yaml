@@ -6,10 +6,10 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 37a0ccdfa71ab86adddb72485f77d56cc9446bede4a3defe11961c5ec9a76865
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -20,11 +20,11 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.9
+    - python {{ python_min }}
     - setuptools_scm
 
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - numpy <1.26.3
     - pooch >=1.0
     - xarray >=0.20
@@ -34,6 +34,8 @@ requirements:
     - setuptools >=40.4
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - pyremo
 
